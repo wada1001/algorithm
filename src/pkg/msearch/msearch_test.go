@@ -6,11 +6,11 @@ import (
 
 	"github.com/wada1001/algorithm/src/pkg/msearch"
 	"github.com/wada1001/algorithm/src/pkg/msort"
-	"github.com/wada1001/algorithm/src/pkg/prepare"
+	"github.com/wada1001/algorithm/src/pkg/util"
 )
 
 func TestLinearSearch(t *testing.T) {
-	arr := prepare.MakeUnsignedIntArr(100, 100)
+	arr := util.MakeUnsignedIntArr(100, 100)
 	type args struct {
 		arr []int
 		tar int
@@ -43,7 +43,7 @@ func TestLinearSearch(t *testing.T) {
 }
 
 func TestBinarySearch(t *testing.T) {
-	arr := prepare.MakeUnsignedIntArr(100, 100)
+	arr := util.MakeUnsignedIntArr(100, 100)
 	type args struct {
 		arr []int
 		tar int

@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/wada1001/algorithm/src/pkg/msort"
-	"github.com/wada1001/algorithm/src/pkg/prepare"
+	"github.com/wada1001/algorithm/src/pkg/util"
 )
 
 
@@ -16,7 +16,7 @@ func TestBubbleSort(t *testing.T) {
 		name string
 		args args
 	}{
-		{"test_a", args{arr: prepare.MakeUnsignedIntArr(100, 100)}},
+		{"test_a", args{arr: util.MakeUnsignedIntArr(100, 100)}},
 	}
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
@@ -39,7 +39,7 @@ func TestQuickSort(t *testing.T) {
 		name string
 		args args
 	}{
-		{"test_a", args{arr: prepare.MakeUnsignedIntArr(100, 100)}},
+		{"test_a", args{arr: util.MakeUnsignedIntArr(100, 100)}},
 	}
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
@@ -62,7 +62,7 @@ func TestMergeSort(t *testing.T) {
 		name string
 		args args
 	}{
-		{"test_a", args{arr: prepare.MakeUnsignedIntArr(100, 100)}},
+		{"test_a", args{arr: util.MakeUnsignedIntArr(100, 100)}},
 	}
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
@@ -85,7 +85,7 @@ func TestCombSort(t *testing.T) {
 		name string
 		args args
 	}{
-		{"test_a", args{arr: prepare.MakeUnsignedIntArr(100, 100)}},
+		{"test_a", args{arr: util.MakeUnsignedIntArr(100, 100)}},
 	}
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {

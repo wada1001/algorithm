@@ -5,15 +5,15 @@ import (
 
 	"github.com/wada1001/algorithm/src/pkg/msearch"
 	"github.com/wada1001/algorithm/src/pkg/msort"
-	"github.com/wada1001/algorithm/src/pkg/prepare"
 	"github.com/wada1001/algorithm/src/pkg/stopwatch"
+	"github.com/wada1001/algorithm/src/pkg/util"
 )
 
 func main ()  {
 	w := stopwatch.Make()
 	w.Start()
 	w.Lap()
-	arr := prepare.MakeUnsignedIntArr(10, 100)
+	arr := util.MakeUnsignedIntArr(10, 100)
 	arr = []int { 1, 2, 2, 2, 2, 2, 3, 4, 4, 4, 5}
 	msort.BubbleSort(arr)
 	fmt.Println(arr)
@@ -24,8 +24,4 @@ func main ()  {
 
 	fmt.Println(i)
 	w.Lap()
-}
-
-func sampleFuncGenerics1[T comparable](x T) T {
-	return x
 }
