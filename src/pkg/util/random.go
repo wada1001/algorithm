@@ -9,6 +9,10 @@ func MakeRandomStr(digit int) string {
     const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     b := make([]byte, digit)
 
+    if _, err := rand.Read(b); err != nil {
+        return ""
+    }
+    
     var result string
     for _, v := range b {
         // index が letters の長さに収まるように調整

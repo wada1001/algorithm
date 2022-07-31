@@ -53,4 +53,3 @@ func BinarySearchLeftEdge(arr []int, tar int) (int, error) {
 	
 	return 0, errors.New("not found")
 }
-
